@@ -1,0 +1,20 @@
+<view class="em-content">
+  <van-search value="{{ value }}" placeholder="请输入搜索关键词" show-action bind:search="onSearch" bind:cancel="onCancel" />
+  <view class="em-minirefresh">
+    <scroll-view class="em-list" scroll-y="true" bindrefresherrefresh="refresh" refresher-enabled="true" refresher-triggered="{{refresherTriggered}}" bindscrolltolower="loadMore">
+      <van-cell-group>
+        <van-cell bind:click="goDetail" wx:for="{{listData}}" wx:for-index="idx" wx:for-item="item" data-id="{{idx}}" useLabelSlot="true" title="流水号：{{item.number}}" value="完成状态">
+          <view slot="label">
+            <view>锻件编号：HTE22028</view>
+            <view>交货日期：2020-07-15</view>
+          </view>
+        </van-cell>
+      </van-cell-group>
+      <view class='data-loading' hidden='{{hideBottom}}'>
+        {{loadMoreData}}
+      </view>
+    </scroll-view>
+
+  </view>
+
+</view>

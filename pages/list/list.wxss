@@ -1,0 +1,27 @@
+/* pages/list/list.wxss */
+page{
+  height: 100%;
+  overflow: hidden;
+}
+.em-content{
+  height:100%;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.em-minirefresh{
+  flex:1;
+  height:0;
+}
+
+.em-list{
+  height:100%;
+}
+
+.data-loading{
+  height: 100rpx;
+  line-height: 100rpx;
+  background-color: #eee;
+  text-align: center;
+  font-size: 14px;
+}
